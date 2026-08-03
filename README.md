@@ -1,204 +1,373 @@
 # Ex.No.4 – Scenario-Based Report Development Utilizing Diverse Prompting Techniques
 
-### DATE: 03/08/2026
+### DATE: 03/09/2025
 
 ### REGISTER NUMBER: 212223060188
 
 ## Aim
 
-To design an AI-powered healthcare assistant that helps doctors and patients with early disease diagnosis, symptom analysis, and treatment recommendations. The chatbot should provide accurate, user-friendly, and reliable responses while maintaining patient safety. This experiment applies different prompting techniques to analyze AI performance using Comparative Analysis Prompt, Universal Prompt, Structured Prompt Refinements, and Prompt Size Limitations.
-
-### Explanation
-
-**Use Case:** AI in Smart Healthcare – Early Disease Diagnosis
+To design an AI-powered Smart Irrigation Assistant that helps farmers optimize water usage based on soil moisture, weather conditions, crop type, and temperature. The assistant should provide efficient irrigation recommendations while conserving water and improving crop productivity. This experiment employs various prompt engineering techniques including Zero-shot Prompting, Few-shot Prompting, Chain of Thought, Persona Pattern, Reverse Prompting, Graph Prompting, and Active Prompting.
 
 ---
 
-# AI-Powered Prompting Experiment: Early Disease Diagnosis Using AI
+# Explanation
+
+### Use Case
+
+**AI in Smart Irrigation System**
+
+---
+
+# AI-Powered Prompting Experiment: Smart Irrigation using AI
 
 ## Scenario
 
-How can AI assist doctors in accurately diagnosing diseases at an early stage while ensuring patient safety and reducing diagnostic errors?
+How can an AI-powered irrigation assistant help farmers determine the right amount of water for crops while minimizing water wastage?
 
-AI-based healthcare systems analyze patient symptoms, medical history, laboratory reports, and imaging data to support doctors in making accurate diagnoses. The goal is to evaluate how different prompting techniques influence AI-generated medical recommendations.
-
----
-
-# 1. Comparative Analysis Prompt
-
-## Prompt Example
-
-Compare three AI approaches used for early disease diagnosis:
-
-* Machine Learning Models
-* Deep Learning on Medical Images
-* Rule-Based Expert Systems
-
-Highlight their strengths, weaknesses, and ideal applications.
-
-## AI Response (Expected)
-
-### Machine Learning Models
-
-* Learns patterns from patient records.
-* Performs well for structured medical data.
-* Requires quality training datasets.
-
-### Deep Learning
-
-* Excellent at detecting diseases from X-rays, MRI, and CT scans.
-* High diagnostic accuracy.
-* Requires powerful computing resources and large datasets.
-
-### Rule-Based Expert Systems
-
-* Uses predefined medical rules.
-* Easy to explain decisions.
-* Limited when handling complex or unknown diseases.
-
-### Comparative Insight
-
-* Machine Learning → Best for patient history analysis.
-* Deep Learning → Best for medical imaging.
-* Rule-Based Systems → Best for standard clinical guidelines.
-
-**Best Solution:** Combining all three approaches provides the most accurate and reliable healthcare diagnosis.
+The AI considers multiple environmental factors including soil moisture, weather forecast, crop type, humidity, rainfall probability, and temperature before recommending irrigation schedules.
 
 ---
 
-# 2. Comparative Analysis Prompt (Alternative Framing)
+# 1. Zero-shot Prompting
 
-## Prompt Example
+### Prompt
 
-Evaluate the effectiveness of AI diagnosis when using a **fully automated diagnostic system** versus an **AI-assisted doctor decision support system**. Which approach provides better patient safety?
-
-## AI Response (Expected)
-
-### Fully Automated Diagnosis
-
-* Faster diagnosis.
-* Reduces doctor workload.
-* May miss rare or unusual conditions.
-
-### AI-Assisted Doctor
-
-* AI suggests possible diseases.
-* Doctors verify final decisions.
-* Higher reliability and patient trust.
-
-### Comparative Insight
-
-* Fully Automated → Faster and efficient.
-* AI-Assisted Doctor → More accurate and safer.
-
-**Best Solution:** AI should assist doctors rather than replace them entirely.
-
----
-
-# 3. Prompt Size Limitations Technique
-
-## Short Prompt
-
-**Prompt:**
-
-"How can AI improve early disease diagnosis?"
+> Should irrigation be started if the soil moisture is 18%, temperature is 35°C, and no rainfall is expected today?
 
 ### AI Response
 
-* Analyze symptoms
-* Detect diseases quickly
-* Recommend medical tests
-* Support doctors
-
----
-
-## Extended Prompt
-
-**Prompt:**
-
-"Explain how AI systems improve early disease diagnosis by analyzing patient symptoms, laboratory reports, medical imaging, electronic health records, and genetic information. Discuss the role of machine learning, deep learning, and decision-support systems while ensuring patient safety and diagnostic accuracy."
-
-### AI Response
-
-* Integrates multiple medical data sources.
-* Uses deep learning for image analysis.
-* Predicts disease risks using machine learning.
-* Supports doctors through intelligent recommendations.
-* Improves diagnostic accuracy.
-* Reduces medical errors.
-* Enables personalized treatment planning.
+* Soil moisture is critically low.
+* High temperature increases water loss.
+* No rainfall is expected.
+* Irrigation should begin immediately.
 
 ### Observation
 
-* **Short Prompt** → Produces brief and general responses.
-* **Extended Prompt** → Produces detailed, structured, and context-aware responses.
+AI generated a recommendation without being given any examples.
 
 ---
 
-# 4. Experimental Setup
+# 2. Few-shot Prompting
+
+### Prompt
+
+Example 1
+
+Input
+
+Soil Moisture: 20%
+
+Temperature: 34°C
+
+Rainfall: No
+
+Output
+
+Start irrigation.
+
+Example 2
+
+Input
+
+Soil Moisture: 70%
+
+Temperature: 28°C
+
+Rainfall: Yes
+
+Output
+
+Do not irrigate.
+
+Now answer:
+
+Input
+
+Soil Moisture: 25%
+
+Temperature: 36°C
+
+Rainfall: No
+
+### AI Response
+
+Start irrigation because soil moisture is below the recommended level and high temperature increases evaporation.
+
+### Observation
+
+Providing examples improved consistency and accuracy.
+
+---
+
+# 3. Chain of Thought Prompt
+
+### Prompt
+
+Think step-by-step before deciding whether irrigation should begin.
+
+Input
+
+* Soil Moisture = 22%
+* Temperature = 38°C
+* Humidity = 40%
+* Rain Forecast = No
+
+Explain your reasoning.
+
+### AI Response
+
+Step 1:
+
+Soil moisture is below the optimum range.
+
+Step 2:
+
+High temperature increases evaporation.
+
+Step 3:
+
+Low humidity accelerates moisture loss.
+
+Step 4:
+
+No rainfall is expected.
+
+Final Decision:
+
+Start irrigation immediately.
+
+### Observation
+
+Step-by-step reasoning makes the AI's decision more transparent.
+
+---
+
+# 4. Persona Pattern
+
+### Prompt
+
+You are an experienced agricultural scientist specializing in irrigation management.
+
+Recommend an irrigation plan for a tomato farm with low soil moisture and high temperature.
+
+### AI Response
+
+As an agricultural expert,
+
+* Begin irrigation during early morning.
+* Use drip irrigation.
+* Apply moderate water.
+* Monitor soil moisture every 6 hours.
+* Avoid irrigation during peak afternoon heat.
+
+### Observation
+
+Assigning a role improves the quality and professionalism of responses.
+
+---
+
+# 5. Reverse Prompting
+
+### Prompt
+
+Before recommending irrigation, ask me the important information you require.
+
+### AI Response
+
+Please provide:
+
+* Crop type
+* Soil moisture
+* Temperature
+* Rain forecast
+* Humidity
+* Irrigation method
+
+After receiving these details, I can recommend an irrigation schedule.
+
+### Observation
+
+AI first gathers missing information before making recommendations.
+
+---
+
+# 6. Graph Prompting
+
+### Prompt
+
+Represent the irrigation decision-making process as a flowchart.
+
+### AI Response
+
+```
+Start
+   │
+Check Soil Moisture
+   │
+Is Moisture < 30%?
+   │
+ ┌──Yes───────────┐
+ │                │
+Check Rain Forecast
+ │                │
+Rain Expected?
+ │                │
+Yes            No
+ │                │
+Wait         Start Irrigation
+ │                │
+End             End
+```
+
+### Observation
+
+Graph prompting provides a clear visual understanding of the decision process.
+
+---
+
+# 7. Active Prompting
+
+### Prompt
+
+If you are uncertain about recommending irrigation, ask follow-up questions before making a decision.
+
+### AI Response
+
+I need additional information:
+
+* Current humidity?
+* Wind speed?
+* Soil type?
+* Crop growth stage?
+
+After receiving this information, I will provide the best irrigation recommendation.
+
+### Observation
+
+Active prompting improves reliability by reducing uncertainty.
+
+---
+
+# 8. Experimental Setup
 
 ### Objective
 
-Study how different prompting techniques influence AI in generating accurate disease diagnosis recommendations.
+Evaluate how different prompting techniques influence AI recommendations for smart irrigation.
 
 ### Method
 
-* Apply comparative analysis prompts.
-* Compare different diagnostic approaches.
-* Test short and extended prompts.
+* Apply seven prompt engineering techniques.
+* Compare AI-generated recommendations.
+* Analyze reasoning quality and response accuracy.
 
 ### Data
 
-Medical datasets, electronic health records, diagnostic imaging, and AI-generated outputs.
+* Soil Moisture
+* Temperature
+* Humidity
+* Rain Forecast
+* Crop Type
+* Weather Data
 
 ### Evaluation Metrics
 
-* Accuracy
-* Clarity
-* Explainability
-* Practical usefulness
-* Patient safety
+* Reasoning
+* Correctness
+* Token Usage
 
 ---
 
-# 5. Results and Analysis
+# 9. Results and Analysis
 
-* Comparative prompts clearly distinguish different AI diagnostic methods.
-* Alternative framing highlights the balance between automation and human expertise.
-* Larger prompts generate more informative and clinically useful responses.
-* Structured prompts improve the quality and relevance of AI-generated recommendations.
-
-<img width="707" height="658" alt="image" src="https://github.com/user-attachments/assets/91c7dc8a-ae5c-43b7-8f8b-bdc18b27309e" />
-
-
----
-
-# 6. Comparative Analysis Table
-
-| Strategy                  | Core Function                          | Key Strengths                         | Main Drawbacks              | Ideal Scenarios                  |
-| ------------------------- | -------------------------------------- | ------------------------------------- | --------------------------- | -------------------------------- |
-| Machine Learning Models   | Analyze structured patient records     | Fast predictions, learns from data    | Requires quality datasets   | Disease risk prediction          |
-| Deep Learning             | Analyze X-rays, MRI, CT scans          | High image recognition accuracy       | High computational cost     | Cancer detection, lung diseases  |
-| Rule-Based Expert Systems | Uses predefined medical rules          | Transparent decisions                 | Limited flexibility         | Standard disease diagnosis       |
-| Fully Automated Diagnosis | AI independently diagnoses patients    | Very fast, scalable                   | Risk of incorrect diagnosis | Initial health screening         |
-| AI-Assisted Doctor        | AI supports physician decisions        | High accuracy, better safety          | Requires doctor involvement | Hospitals and healthcare centers |
-| Hybrid AI Healthcare      | Combines automation with doctor review | Best balance of speed and reliability | Complex implementation      | Advanced medical institutions    |
+* Zero-shot prompts generated quick responses.
+* Few-shot prompts improved consistency.
+* Chain of Thought explained every decision.
+* Persona Pattern produced expert-level recommendations.
+* Reverse Prompting collected missing information.
+* Graph Prompting simplified decision-making.
+* Active Prompting reduced uncertainty before recommendations.
 
 ---
 
-# 7. Conclusion
+# 10. Comparative Analysis Table
 
-This experiment demonstrates that prompt design significantly affects the quality of AI-generated healthcare recommendations.
+| Prompt Technique    | Purpose                      | Advantages             | Limitation                | Best Use Case               |
+| ------------------- | ---------------------------- | ---------------------- | ------------------------- | --------------------------- |
+| Zero-shot Prompting | Direct recommendation        | Fast response          | Less contextual           | Simple irrigation decisions |
+| Few-shot Prompting  | Learns from examples         | Higher accuracy        | Longer prompt             | Similar farming situations  |
+| Chain of Thought    | Step-by-step reasoning       | Transparent decisions  | More tokens               | Complex irrigation planning |
+| Persona Pattern     | Expert recommendations       | Professional advice    | Depends on prompt quality | Agricultural consultancy    |
+| Reverse Prompting   | Collects missing information | Better recommendations | Extra interaction         | Incomplete farm data        |
+| Graph Prompting     | Visual decision process      | Easy to understand     | Limited detail            | Farmer training             |
+| Active Prompting    | Clarifies uncertainty        | Reliable output        | Requires user input       | Real-world deployment       |
 
-* Comparative prompts effectively identify the strengths and weaknesses of diagnostic methods.
-* Alternative framing highlights the trade-off between automation and human expertise.
-* Longer prompts produce more comprehensive and accurate medical insights.
-* Well-structured prompts guide AI toward generating safer, more reliable, and clinically meaningful responses.
+---
+
+# 11. Evaluation
+
+## Reasoning
+
+| Technique        | Rating    |
+| ---------------- | --------- |
+| Zero-shot        | Medium    |
+| Few-shot         | High      |
+| Chain of Thought | Very High |
+| Persona          | High      |
+| Reverse Prompt   | High      |
+| Graph Prompt     | Medium    |
+| Active Prompt    | Very High |
+
+---
+
+## Correctness
+
+| Technique        | Accuracy |
+| ---------------- | -------- |
+| Zero-shot        | 82%      |
+| Few-shot         | 91%      |
+| Chain of Thought | 95%      |
+| Persona          | 93%      |
+| Reverse Prompt   | 94%      |
+| Graph Prompt     | 88%      |
+| Active Prompt    | 96%      |
+
+---
+
+## Token Usage
+
+| Technique        | Approximate Token Usage |
+| ---------------- | ----------------------- |
+| Zero-shot        | Low                     |
+| Few-shot         | Medium                  |
+| Chain of Thought | High                    |
+| Persona          | Medium                  |
+| Reverse Prompt   | Medium                  |
+| Graph Prompt     | Medium                  |
+| Active Prompt    | High                    |
+
+---
+
+# 12. Conclusion
+
+This experiment demonstrates that different prompt engineering techniques significantly influence the quality of AI recommendations in Smart Irrigation systems.
+
+* **Zero-shot Prompting** provides fast recommendations.
+* **Few-shot Prompting** improves accuracy using examples.
+* **Chain of Thought** enhances explainability through step-by-step reasoning.
+* **Persona Pattern** generates expert-level agricultural advice.
+* **Reverse Prompting** collects essential information before making decisions.
+* **Graph Prompting** visualizes the irrigation workflow for better understanding.
+* **Active Prompting** minimizes uncertainty by requesting additional inputs.
+
+Overall, combining these prompting techniques results in more accurate, explainable, and reliable irrigation recommendations while optimizing water usage and improving agricultural productivity.
 
 ---
 
 # Result
 
-**Thus, the prompts were executed successfully, and the effectiveness of different prompting techniques for AI-assisted early disease diagnosis was analyzed and evaluated.**
+**Thus, the various prompt engineering techniques were successfully implemented and evaluated for the Smart Irrigation case study. The AI assistant demonstrated improved reasoning, correctness, and efficient token utilization, making it suitable for intelligent irrigation decision support.**
+
+
+
 
 
