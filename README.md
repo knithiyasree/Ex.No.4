@@ -168,6 +168,9 @@ Medical datasets, electronic health records, diagnostic imaging, and AI-generate
 * Larger prompts generate more informative and clinically useful responses.
 * Structured prompts improve the quality and relevance of AI-generated recommendations.
 
+<img width="707" height="658" alt="image" src="https://github.com/user-attachments/assets/91c7dc8a-ae5c-43b7-8f8b-bdc18b27309e" />
+
+
 ---
 
 # 6. Comparative Analysis Table
