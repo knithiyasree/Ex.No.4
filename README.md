@@ -1,7 +1,7 @@
 # Ex.No.4 – Generate the Prompt and Evaluate for Different Prompt Types
 
-**DATE:** 03/09/2025
-**REGISTER NUMBER:** 212223060288
+**DATE:** 03/08/2026
+**REGISTER NUMBER:** 212223060188
 
 ## Aim
 
@@ -195,77 +195,7 @@ Breaking large requests into smaller chunks improves response quality and reduce
 * Gemini provided technically accurate but slightly shorter responses.
 * Copilot gave concise responses suitable for quick understanding.
 
-
-```svg
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="720" height="380" viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg">
-
-  <rect width="720" height="380" fill="white"/>
-
-  <text x="360" y="35"
-        text-anchor="middle"
-        font-family="Arial"
-        font-size="22"
-        font-weight="bold"
-        fill="#1F2937">
-    Rubrics Evaluation of AI Tools
-  </text>
-
-  <!-- Axes -->
-  <line x1="80" y1="320" x2="660" y2="320" stroke="#374151" stroke-width="2"/>
-  <line x1="80" y1="60" x2="80" y2="320" stroke="#374151" stroke-width="2"/>
-
-  <!-- Grid -->
-  <g stroke="#E5E7EB" stroke-width="1">
-    <line x1="80" y1="268" x2="660" y2="268"/>
-    <line x1="80" y1="216" x2="660" y2="216"/>
-    <line x1="80" y1="164" x2="660" y2="164"/>
-    <line x1="80" y1="112" x2="660" y2="112"/>
-    <line x1="80" y1="60" x2="660" y2="60"/>
-  </g>
-
-  <!-- Y Axis Labels -->
-  <g font-family="Arial" font-size="12" fill="#374151">
-    <text x="55" y="324">0</text>
-    <text x="50" y="272">5</text>
-    <text x="45" y="220">10</text>
-    <text x="45" y="168">15</text>
-    <text x="45" y="116">20</text>
-    <text x="45" y="64">25</text>
-  </g>
-
-  <!-- Bars -->
-  <rect x="140" y="60" width="90" height="260" rx="8" fill="#2563EB"/>
-  <rect x="315" y="91" width="90" height="229" rx="8" fill="#10B981"/>
-  <rect x="490" y="122" width="90" height="198" rx="8" fill="#F97316"/>
-
-  <!-- Values -->
-  <g font-family="Arial" font-size="16" font-weight="bold" fill="#111827">
-    <text x="185" y="52" text-anchor="middle">25</text>
-    <text x="360" y="83" text-anchor="middle">22</text>
-    <text x="535" y="114" text-anchor="middle">19</text>
-  </g>
-
-  <!-- X Axis Labels -->
-  <g font-family="Arial" font-size="14" fill="#111827">
-    <text x="185" y="345" text-anchor="middle">ChatGPT</text>
-    <text x="360" y="345" text-anchor="middle">Google Gemini</text>
-    <text x="535" y="345" text-anchor="middle">Microsoft Copilot</text>
-  </g>
-
-  <!-- Y Axis Title -->
-  <text x="22"
-        y="190"
-        transform="rotate(-90 22 190)"
-        font-family="Arial"
-        font-size="14"
-        font-weight="bold"
-        fill="#111827">
-    Score (Out of 25)
-  </text>
-
-</svg>
-```
+<img width="937" height="490" alt="image" src="https://github.com/user-attachments/assets/e929f5f7-1651-44e7-a530-3182fee70dcc" />
 
 
 ---
